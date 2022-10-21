@@ -1,0 +1,28 @@
+<?php
+
+ abstract class Forma{
+	
+		public $tipoDeForma;
+		
+		public function imprimeForma(){
+			echo $this->tipoDeForma; 
+			}
+		
+	abstract public function calcularArea();
+	
+}
+
+	class Quadrado extends Forma{
+		
+		public $lado = 4;
+		
+		public function calcularArea(){
+			return $this-> lado * $this-> lado;
+		}
+	}
+$obj = new Quadrado();
+$obj-> imprimeForma = 'Quadrado';
+$obj-> calcularArea();
+$obj-> imprimeForma();
+
+?>
